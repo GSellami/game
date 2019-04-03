@@ -142,3 +142,46 @@ pos=rand()%(positionmax-positionmin+1)+positionmin;
        
 
  }
+ 
+ 
+ void deplacement_ennemi_x (ennemi *entite)
+{
+	static int k=0;
+
+    if (k==0) 
+{
+  entite->frame.y=entite->frameright;
+         if (entite->position_entite.x<entite->position_aleatoire_max_x)
+       {
+      entite->position_entite.x++;
+      }
+      else
+      {
+         
+         k=1;
+      }
+
+}
+
+  if (k==1) 
+{
+ entite->frame.y=entite->frameleft;
+     
+         if (entite->position_entite.x>=entite->position_aleatoire_min_x)
+       {
+       entite->position_entite.x--;
+      }
+      else
+      {
+         
+         k=0;
+      }
+     
+
+}
+
+
+
+}
+
+ 
