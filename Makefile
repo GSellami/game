@@ -1,7 +1,7 @@
-prog: main1.o enemy.o 
-	gcc main1.o enemy.o -o prog -lSDL -lSDL_image -lSDL_mixer
-main1.o: main1.c
-	gcc -c main1.c
-ennemy.o: enemy.c
-	gcc -c enemy.c
+pers:main.o fonction.o 
+	gcc   main.o fonction.o -o pers -lSDL -lSDL_image
+main.o:main.c
+	gcc -c main.c -g
 
+enigf.o:fonction.c
+	gcc -c fonction.c -g 
