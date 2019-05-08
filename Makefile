@@ -1,6 +1,6 @@
-prog:chrono.o main.o 
-	gcc chrono.o main.o -o prog -g
+prog:score.o main.o
+	gcc score.o main.o -o prog -lSDL -lSDL_image -g
 main.o:main.c
-	gcc -c main.c -g
-enemy.o:chrono.c
-	gcc -c chrono.c  -g
+	gcc -c main.c -lSDL -lSDL_image -g
+score.o:score.c
+	gcc -c score.c -lSDL -lSDL_image -g
