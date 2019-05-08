@@ -1,7 +1,6 @@
-pers:main.o fonction.o 
-	gcc   main.o fonction.o -o pers -lSDL -lSDL_image
+prog:chrono.o main.o 
+	gcc chrono.o main.o -o prog -g
 main.o:main.c
 	gcc -c main.c -g
-
-enigf.o:fonction.c
-	gcc -c fonction.c -g 
+enemy.o:chrono.c
+	gcc -c chrono.c  -g
